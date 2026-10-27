@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#12081c">
+<title>Thank You, Aliza.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--pad:clamp(1.2rem,2.4vw,1.8rem);--ease:cubic-bezier(.2,.8,.2,1);--ink2:rgba(255,255,255,.66)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:#12081c;scroll-behavior:smooth;scrollbar-gutter:stable}
+body{margin:0;color:#fff;font-family:-apple-system,"SF Pro Display",Inter,system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+:focus-visible{outline:2px solid #ffd9a8;outline-offset:3px}
+/* mesh */
+.mesh{position:fixed;inset:0;z-index:-1;overflow:hidden;background:#12081c}
+.mesh::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,transparent 40%,rgba(10,4,20,.55))}
+.mesh i{position:absolute;border-radius:50%;filter:blur(90px);will-change:transform}
+.m1{width:60vmax;height:60vmax;left:-15vmax;top:-22vmax;background:#ff7aa8;opacity:.7;animation:d1 28s ease-in-out infinite alternate}
+.m2{width:52vmax;height:52vmax;right:-16vmax;top:8vh;background:#8b5cf6;opacity:.65;animation:d2 34s ease-in-out infinite alternate}
+.m3{width:46vmax;height:46vmax;left:8vw;bottom:-24vmax;background:#ffc46b;opacity:.5;animation:d3 31s ease-in-out infinite alternate}
+.m4{width:34vmax;height:34vmax;left:38vw;top:30vh;background:#fff0e6;opacity:.28;animation:d4 40s ease-in-out infinite alternate}
+@keyframes d1{to{transform:translate(20vmax,16vmax) scale(1.15)}}
+@keyframes d2{to{transform:translate(-22vmax,12vmax) scale(.9)}}
+@keyframes d3{to{transform:translate(24vmax,-14vmax) scale(1.2)}}
+@keyframes d4{to{transform:translate(-26vmax,18vmax) scale(1.3)}}
+/* glass */
+.glass{background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.05));backdrop-filter:blur(24px) saturate(170%);-webkit-backdrop-filter:blur(24px) saturate(170%);border:1px solid rgba(255,255,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -1px 0 rgba(255,255,255,.06),0 1px 2px rgba(0,0,0,.15),0 12px 28px -8px rgba(8,2,20,.45),0 32px 64px -20px rgba(8,2,20,.5)}
+/* hero */
+#hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:2rem 1.2rem}
+.hi{display:flex;flex-direction:column;align-items:center}
+.hi>*{animation:up 1.3s var(--ease) both}.hi>:nth-child(2){animation-delay:.15s}.hi>:nth-child(3){animation-delay:.35s}.hi>:nth-child(4){animation-delay:.5s}
+@keyframes up{from{opacity:0;translate:0 26px;filter:blur(12px)}}
+.badge{display:inline-flex;align-items:center;gap:.6rem;padding:.55rem 1.1rem;border-radius:999px;font-size:.85rem;font-weight:400;letter-spacing:.01em}
+.badge i{width:7px;height:7px;border-radius:50%;background:#ffc46b;box-shadow:0 0 12px #ffc46b}
+h1{margin:1.6rem 0 1rem;font-size:clamp(3.4rem,14vw,10.5rem);font-weight:200;line-height:.95;letter-spacing:-.045em;background:linear-gradient(180deg,#fff 35%,rgba(255,255,255,.55));-webkit-background-clip:text;background-clip:text;color:transparent;transition:letter-spacing 2.4s var(--ease),opacity .1s}
+h1.pre{letter-spacing:.09em}
+.sub{margin:0 0 2.6rem;max-width:26rem;font-size:clamp(1.05rem,2.4vw,1.3rem);color:var(--ink2);line-height:1.4}
+#cta{position:relative;padding:1.05rem 2rem;border-radius:999px;border:1px solid rgba(255,255,255,.3);font-weight:400;font-size:1.05rem;overflow:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.32),rgba(255,255,255,.08));backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.6),inset 0 -12px 20px rgba(255,122,168,.2),0 5px 0 rgba(88,40,120,.6),0 18px 34px -6px rgba(255,122,168,.5);transition:box-shadow .2s,scale .2s}
+#cta::before{content:"";position:absolute;inset:0;background:radial-gradient(120px circle at var(--sx,50%) var(--sy,0%),rgba(255,255,255,.45),transparent 70%);opacity:0;transition:opacity .3s}
+#cta:hover::before{opacity:1}
+#cta:active{scale:.965;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 1px 0 rgba(88,40,120,.6),0 8px 18px -6px rgba(255,122,168,.5)}
+#cta span{position:relative;display:inline-block}
+/* grid */
+#grid{max-width:1120px;margin:0 auto;padding:7rem 1.2rem 5rem}
+h2.t{margin:0;text-align:center;font-size:clamp(2.4rem,7vw,4.8rem);font-weight:200;line-height:1.05;letter-spacing:-.04em}
+.lead{text-align:center;color:var(--ink2);font-size:1.1rem;margin:.9rem auto 0;max-width:30rem}
+.bento{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,minmax(220px,1fr));gap:14px;margin-top:3.5rem}
+.a1{grid-column:1/3;grid-row:1}.a2{grid-column:3;grid-row:1/3}.a3{grid-column:1;grid-row:2}.a4{grid-column:2;grid-row:2}.a5{grid-column:1;grid-row:3}.a6{grid-column:2/4;grid-row:3}
+.card{position:relative;display:flex;align-items:flex-end;padding:var(--pad);border-radius:28px;text-align:left;overflow:hidden;
+  transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .35s var(--ease),translate 1s var(--ease) var(--d,0s),opacity 1s var(--ease) var(--d,0s),scale .4s var(--ease)}
+.js .card{opacity:0;translate:0 30px}.js .card.in{opacity:1;translate:0 0}
+.card:hover{scale:1.012}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(380px circle at var(--sx,50%) var(--sy,0%),rgba(255,255,255,.26),transparent 45%);opacity:0;transition:opacity .3s}
+.card:hover::after{opacity:1}
+.orb{position:absolute;width:72%;aspect-ratio:1;right:-18%;top:-24%;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--g1),var(--g2) 55%,transparent 72%);filter:blur(22px);opacity:.7;transform:translate(calc(var(--mx,0)*16px),calc(var(--my,0)*16px));transition:transform .5s var(--ease),opacity .4s}
+.card:hover .orb{opacity:1}
+.plus{position:absolute;top:var(--pad);right:var(--pad);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);font-size:1.2rem;font-weight:300;transition:rotate .5s var(--ease),background .3s}
+.card:hover .plus{rotate:90deg;background:rgba(255,255,255,.28)}
+.cc{position:relative;transform:translate(calc(var(--mx,0)*-5px),calc(var(--my,0)*-5px));transition:transform .5s var(--ease)}
+.cc h3{margin:0 0 .4rem;font-size:1.4rem;font-weight:300;line-height:1.15;letter-spacing:-.015em;transition:letter-spacing .5s var(--ease)}
+.card:hover h3{letter-spacing:-.03em}
+.cc p{margin:0;color:var(--ink2);font-size:.95rem;line-height:1.4;max-width:30ch}
+.a1 h3,.a2 h3,.a6 h3{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:200;letter-spacing:-.03em}
+@media(max-width:760px){.bento{grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:minmax(200px,auto)}.card{grid-column:auto!important;grid-row:auto!important}}
+/* sheet */
+.scrim{position:fixed;inset:0;z-index:40;background:rgba(12,5,22,.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transition:opacity .6s}.scrim.on{opacity:1}
+.sheet{position:fixed;z-index:50;overflow:hidden;transition:top .7s,left .7s,width .7s,height .7s,border-radius .7s;transition-timing-function:cubic-bezier(.32,.72,0,1)}
+.sheet::before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 80% 8%,var(--g1),transparent 45%),radial-gradient(circle at 8% 100%,var(--g2),transparent 50%);filter:blur(30px);opacity:0;transition:opacity .9s}.sheet.on::before{opacity:.5}
+.ghost{position:absolute;inset:0;display:flex;align-items:flex-end;padding:var(--pad);transition:opacity .3s}.sheet.on .ghost{opacity:0}
+.sc{position:absolute;inset:0;overflow:auto;display:flex;opacity:0;transition:opacity .2s}.sheet.on .sc{opacity:1;transition:opacity .4s .3s}
+.in{margin:auto;width:100%;max-width:640px;padding:5rem 1.6rem 4rem}
+.in>*{opacity:0;translate:0 18px;transition:opacity .7s var(--ease),translate .7s var(--ease)}.sheet.on .in>*{opacity:1;translate:0 0}.sheet:not(.on) .in>*{transition-delay:0s!important}
+.in h2{margin:0 0 1.1rem;font-size:clamp(2.6rem,9vw,5rem);font-weight:200;line-height:1;letter-spacing:-.04em}
+.lede{font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.3;margin:0 0 1.4rem}
+.in p:not(.lede){color:var(--ink2);font-size:1.05rem;line-height:1.7;margin:0 0 1rem}
+.in blockquote{margin:1.8rem 0;padding:1.3rem 1.5rem;border-radius:22px;font-size:1.25rem;font-style:italic;line-height:1.4}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem}.tags span{padding:.4rem .9rem;border-radius:999px;font-size:.85rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}
+.x{position:absolute;top:18px;right:18px;z-index:3;width:42px;height:42px;border-radius:50%;font-size:1.5rem;font-weight:300;line-height:1;opacity:0;transition:opacity .4s .4s,background .3s}.sheet.on .x{opacity:1}.x:hover{background:rgba(255,255,255,.25)}
+/* note */
+#note{max-width:900px;margin:0 auto;padding:4rem 1.2rem 6rem}
+.panel{border-radius:36px;padding:clamp(2rem,6vw,4.5rem)}
+.panel h2{margin:0 0 2rem;font-size:clamp(2rem,5vw,3.2rem);font-weight:200;letter-spacing:-.035em}
+.lt{margin:0;font-size:clamp(1.5rem,3.7vw,2.4rem);line-height:1.3;letter-spacing:-.015em}
+.js .lt span{opacity:.2;transition:opacity .6s}.js .lt span.on{opacity:1}
+.sg{margin:2.2rem 0 0;color:var(--ink2);font-size:1.05rem}
+footer{text-align:center;color:rgba(255,255,255,.4);font-size:.85rem;padding:0 1rem 3rem}
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="mesh" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i><i class="m4"></i></div>
+<main>
+  <header id="hero"><div class="hi">
+    <div class="badge glass"><i></i>Specially Designed for Aliza</div>
+    <h1 class="pre">Thank You,<br>Aliza.</h1>
+    <p class="sub">Six small reasons the world is a little brighter with you in it.</p>
+    <button id="cta"><span>Explore Experience <b style="font-weight:300">→</b></span></button>
+  </div></header>
+
+  <section id="grid">
+    <h2 class="t">What makes you, you.</h2>
+    <p class="lead">Tap any card to read what I really think.</p>
+    <div class="bento" id="bento"></div>
+  </section>
+
+  <section id="note"><div class="panel glass">
+    <h2>A note, just for you.</h2>
+    <p class="lt">Aliza, this is not a grand gesture, only a sincere one. You have made my days brighter, my laughter easier and my world a little kinder, simply by being yourself. Thank you for all of it, today and every day. I hope you always feel as appreciated as you deserve.</p>
+    <p class="sg">With all my gratitude.</p>
+  </div></section>
+</main>
+<footer>Made with care, for Aliza.</footer>
+
+<script>
+/* ---------- EDIT ME: k=title, s=card line, l=lede, b=paragraphs, q=quote, t=tags, c=orb colours ---------- */
+const D=[
+ {k:"Pure Positivity",s:"The kind of light you can feel from across the room.",l:"You walk in and the temperature of the room changes.",b:["There is a quiet optimism in you, the kind that never needs to announce itself. You find the bright side without brushing past the hard parts, and people leave a little lighter than they arrived.","Thank you for being proof that positivity can be genuine, gentle and completely your own."],q:"“Everything feels more possible when you are around.”",t:["Warm","Genuine","Bright"],c:["#ff7aa8","#ffc46b"]},
+ {k:"Unmatched Energy",s:"You turn “maybe” into “let’s go.”",l:"Your energy is never just loud. It is generous.",b:["It pulls people in, lifts the mood and makes ordinary plans feel like the best idea anyone has had all week.","Thank you for never letting a day feel small."],q:"“Okay, but what if we actually did it?”",t:["Spark","Momentum","Joy"],c:["#8b5cf6","#ff7aa8"]},
+ {k:"The Best Support System",s:"Steady when it matters most.",l:"You show up. That is the whole secret.",b:["Sometimes with exactly the right words, sometimes with none at all. You celebrate loudly, listen carefully and make people feel they were never alone to begin with.","Thank you for being someone I can lean on without a second thought."],q:"“I’m here. Tell me everything.”",t:["Loyal","Present","Kind"],c:["#ffc46b","#fff0e6"]},
+ {k:"Unforgettable Moments",s:"Some days turn into stories.",l:"So many of my favourite memories have you in the middle of them.",b:["Laughing, planning, making the ordinary feel cinematic. I find myself returning to those moments more often than I admit.","Thank you for every one of them, and for the ones still waiting."],q:"“Remember when we couldn’t stop laughing?”",t:["Memories","Laughter","Us"],c:["#ff7aa8","#8b5cf6"]},
+ {k:"Her Laugh",s:"The sound that fixes a bad day.",l:"It arrives like good news.",b:["Unguarded, contagious and impossible to answer with anything but a smile of your own.","Thank you for sharing it so freely."],q:"“Okay, stop, I can’t breathe.”",t:["Joy","Contagious"],c:["#fff0e6","#ff7aa8"]},
+ {k:"Simply Irreplaceable",s:"There is no version of this story without you.",l:"A few people change the shape of everything. You are one of them.",b:["I am grateful in ways that do not fit neatly into a sentence, so I built you something instead.","Thank you, Aliza. For all of it."],q:"“You have no idea how much you matter.”",t:["Rare","Treasured","You"],c:["#ffc46b","#8b5cf6"]}];
+/* ----------------------------------------------------------------------------------------------------- */
+const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)],RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const bento=$('#bento');
+bento.innerHTML=D.map((d,i)=>`<button class="card glass a${i+1}" data-i="${i}" style="--g1:${d.c[0]};--g2:${d.c[1]}" aria-haspopup="dialog"><i class="orb"></i><span class="plus" aria-hidden="true">+</span><div class="cc"><h3>${d.k}</h3><p>${d.s}</p></div></button>`).join('');
+
+/* intro: letter-spacing settles, cards reveal once */
+requestAnimationFrame(()=>setTimeout(()=>$('h1').classList.remove('pre'),120));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const c=e.target;c.style.setProperty('--d',(+c.dataset.i%3)*.1+Math.floor(c.dataset.i/3)*.08+'s');c.classList.add('in');io.unobserve(c)}}),{threshold:.15});
+$$('.card').forEach(c=>io.observe(c));
+
+/* 3D tilt + specular light */
+$$('.card').forEach(c=>{
+  c.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse'||RM)return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height,s=c.style;
+    s.setProperty('--rx',((.5-y)*12).toFixed(2)+'deg');s.setProperty('--ry',((x-.5)*12).toFixed(2)+'deg');s.setProperty('--sx',x*100+'%');s.setProperty('--sy',y*100+'%');s.setProperty('--mx',((x-.5)*2).toFixed(2));s.setProperty('--my',((y-.5)*2).toFixed(2))});
+  c.addEventListener('pointerleave',()=>['--rx','--ry','--mx','--my'].forEach(p=>c.style.setProperty(p,'0')));
+  c.addEventListener('pointerleave',()=>{c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')});
+});
+
+/* magnetic glass button */
+const cta=$('#cta'),ct=$('span',cta);let tx=0,ty=0,px=0,py=0;
+addEventListener('pointermove',e=>{if(e.pointerType!=='mouse'||RM)return;const r=cta.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);
+  if(Math.hypot(dx,dy)<120){tx=dx*.32;ty=dy*.38}else tx=ty=0;cta.style.setProperty('--sx',e.clientX-r.left+'px');cta.style.setProperty('--sy',e.clientY-r.top+'px')});
+(function mag(){if(Math.abs(tx-px)>.01||Math.abs(ty-py)>.01){px+=(tx-px)*.14;py+=(ty-py)*.14;cta.style.transform=`translate3d(${px}px,${py}px,0)`;ct.style.transform=`translate3d(${px*.25}px,${py*.25}px,0)`}requestAnimationFrame(mag)})();
+cta.addEventListener('click',()=>$('#grid').scrollIntoView({behavior:RM?'auto':'smooth'}));
+
+/* expanding glass sheet (FLIP from the card's rectangle) */
+let cur=null;const full=()=>({top:'12px',left:'12px',width:innerWidth-24+'px',height:innerHeight-24+'px',borderRadius:'32px'});
+const rectOf=c=>{const r=c.getBoundingClientRect();return{top:r.top+'px',left:r.left+'px',width:r.width+'px',height:r.height+'px',borderRadius:getComputedStyle(c).borderRadius}};
+function openCard(c){if(cur)return;const d=D[c.dataset.i],s=document.createElement('div'),sc=document.createElement('div');
+  s.className='sheet glass';s.setAttribute('role','dialog');s.setAttribute('aria-modal','true');s.setAttribute('aria-label',d.k);s.style.setProperty('--g1',d.c[0]);s.style.setProperty('--g2',d.c[1]);Object.assign(s.style,rectOf(c));
+  s.innerHTML=`<div class="ghost">${$('.cc',c).outerHTML}</div><button class="x" aria-label="Close">×</button><div class="sc"><div class="in"><h2>${d.k}</h2><p class="lede">${d.l}</p>${d.b.map(t=>`<p>${t}</p>`).join('')}<blockquote class="glass">${d.q}</blockquote><div class="tags">${d.t.map(t=>`<span>${t}</span>`).join('')}</div></div></div>`;
+  $$('.in>*',s).forEach((e,i)=>e.style.transitionDelay=.4+i*.08+'s');
+  sc.className='scrim';document.body.append(sc,s);document.body.style.overflow='hidden';$('main').inert=true;c.style.visibility='hidden';cur={c,s,sc};
+  $('.x',s).onclick=closeCard;sc.onclick=closeCard;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{s.classList.add('on');sc.classList.add('on');Object.assign(s.style,full());$('.x',s).focus({preventScroll:true})}))}
+function closeCard(){if(!cur)return;const{c,s,sc}=cur;cur=null;s.classList.remove('on');sc.classList.remove('on');Object.assign(s.style,rectOf(c));
+  setTimeout(()=>{s.remove();sc.remove();c.style.visibility='';document.body.style.overflow='';$('main').inert=false;c.focus({preventScroll:true})},720)}
+bento.addEventListener('click',e=>{const c=e.target.closest('.card');c&&openCard(c)});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeCard()});
+addEventListener('resize',()=>{cur&&Object.assign(cur.s.style,full())});
+
+/* hero parallax + word-by-word note reveal */
+const lt=$('.lt');lt.innerHTML=lt.textContent.trim().split(/\s+/).map(w=>`<span>${w}</span>`).join(' ');const ws=$$('.lt span'),hi=$('.hi'),hf=$$('h1,.sub');
+function onScroll(){const p=Math.min(1,scrollY/(innerHeight*.75));hi.style.transform=`translateY(${-p*36}px) scale(${1-p*.05})`;hf.forEach(e=>e.style.opacity=1-p);
+  const r=$('.panel').getBoundingClientRect(),q=Math.min(1,Math.max(0,(innerHeight*.8-r.top)/(r.height*.9))),n=Math.round(q*ws.length*1.05);ws.forEach((w,i)=>w.classList.toggle('on',i<n))}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+</script>
+</body>
+</html>
